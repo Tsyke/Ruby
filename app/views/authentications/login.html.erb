@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="center">
+      <form method="POST">
+        <div class="formTitle">
+          Login
+        </div>
+        <div class="formInput">
+          <input type="email" class="input" name="email" id="email" placeholder="E-mail..." required> <br /> <br>
+          <input type="password" class="input" name="password" id="password" placeholder="Password..." required>
+        </div>
+        <br><br>
+        <div class="formBtn">
+          <input type="submit" value="Se connecter">
+          <a href="/register" class="abtn">Pas encore de compte ?</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    try {
+      const url = window.location.toString().split("/");
+      if(url[url.length -1 ] === "login?err=naf") alert("Veuillez vérifier l'adresse mail et le mot de passe")
+      if(url[url.length -1 ] === "login?err=invalid_password") alert("Veuillez vérifier le mot de passe")
+    } catch(e) {
+      if(window.location.toString().split("/")[window.location.toString().split("/").length-1] === "login?err=naf") alert("Veuillez vérifier l'adresse mail et le mot de passe")
+      if(window.location.toString().split("/")[window.location.toString().split("/").length-1] === "login?err=invalid_password") alert("Veuillez vérifier l'adresse mail et le mot de passe")
+    }
+  </script>
+</html>

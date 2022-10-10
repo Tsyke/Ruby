@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+
+html,
+body {
+    background-color: #00374d;
+    color: rgb(255, 255, 255);
+    font-family: 'Exo', sans-serif;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.formTitle {
+    font-size: 30px;
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form.form {
+    width: 600px;
+}
+
+.input {
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+}
+
+.formBtn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    transition: .4s;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+    transform: scale(1.1);
+}
+
+form.form input[type="email"], input[type="text"], input[type="date"], input[type="tel"] {
+    width: 40%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+}
+
+.pass {
+    width: 40%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+}
+
+.formInputRegister {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInputRegister>*:not(:first-child) {
+    margin-left: 30px;
+}
+
+.formInputRegister {
+    margin-top: 15px;
+}
+
+.abtn {
+    text-decoration: none;
+    color: orange;
+}
